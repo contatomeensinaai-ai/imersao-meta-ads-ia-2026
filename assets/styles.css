@@ -236,9 +236,7 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    linear-gradient(90deg, rgba(3,4,6,.97) 0%, rgba(3,4,6,.74) 45%, rgba(3,4,6,.12) 100%),
-    url("abertura/cofre-premium.png") center / cover no-repeat;
+  background: #050608;
 }
 
 .opening-slide::before {
@@ -254,6 +252,16 @@ a { color: inherit; }
 
 .opening-content { position: relative; z-index: 3; width: min(100%, 1080px); margin-inline: auto; text-align: center; }
 .opening-content-left { margin-inline: 0 auto; text-align: left; max-width: 920px; }
+.opening-safe-left {
+  --opening-image: none;
+  background-image:
+    linear-gradient(90deg, rgba(3,4,6,.98) 0%, rgba(3,4,6,.94) 39%, rgba(3,4,6,.55) 58%, rgba(3,4,6,.06) 78%),
+    var(--opening-image);
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+}
+.opening-safe-left .opening-content { width: min(50%, 650px); margin-inline: 0 auto; }
 .opening-slide h1,
 .opening-slide h2 { max-width: none; font-size: clamp(2.8rem, 7vw, 7rem); line-height: .92; letter-spacing: -.065em; text-wrap: balance; }
 .opening-slide h1 span,
@@ -262,6 +270,21 @@ a { color: inherit; }
 .opening-slide .eyebrow { color: var(--opening-gold); }
 
 .opening-fabio { background: linear-gradient(90deg, #050608 0%, #090b0f 55%, #131823 100%); }
+.opening-cover,
+.opening-practice {
+  background:
+    linear-gradient(90deg, rgba(3,4,6,.92) 0%, rgba(3,4,6,.55) 48%, rgba(3,4,6,.1) 100%),
+    url("abertura/cofre-premium.png") center / cover no-repeat;
+}
+.opening-journey { --opening-image: url("abertura/jornada-portais.png"); }
+.opening-day-one { --opening-image: url("abertura/dia-1-mercado-local.png"); }
+.opening-day-two { --opening-image: url("abertura/dia-2-campanha.png"); }
+.opening-extra { --opening-image: url("abertura/chatgpt-ads.png"); }
+.opening-tools { --opening-image: url("abertura/tres-ferramentas.png"); }
+.opening-story-intro { --opening-image: url("abertura/historia-rio.png"); }
+.opening-story-feed { --opening-image: url("abertura/historia-racao.png"); }
+.opening-story-ripples { --opening-image: url("abertura/historia-peixes.png"); }
+.opening-business { --opening-image: url("abertura/presenca-negocio-local.png"); }
 .fabio-stage {
   position: absolute;
   z-index: 1;
@@ -276,8 +299,6 @@ a { color: inherit; }
   mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 100%);
 }
 
-.opening-centered::after,
-.opening-tools::after,
 .opening-practice::after {
   content: "";
   position: absolute;
@@ -292,7 +313,7 @@ a { color: inherit; }
   box-shadow: 0 0 0 36px rgba(0,0,0,.22), 0 0 120px rgba(217,180,91,.14);
 }
 
-.opening-day { background-position: 68% center; }
+.opening-day { background-position: center, center; }
 .day-number {
   position: absolute;
   z-index: 0;
@@ -316,7 +337,7 @@ a { color: inherit; }
   letter-spacing: -.08em;
 }
 
-.tool-lines { display: grid; gap: 1.1rem; width: min(100%, 860px); margin: 2rem auto 0; }
+.tool-lines { display: grid; gap: .7rem; width: min(100%, 620px); margin: 1.5rem 0 0; }
 .tool-line {
   display: grid;
   grid-template-columns: minmax(150px, .7fr) 1fr;
@@ -325,12 +346,12 @@ a { color: inherit; }
   border-bottom: 1px solid rgba(217,180,91,.34);
   text-align: left;
 }
-.tool-line strong { color: var(--opening-gold-bright); font-size: clamp(1.6rem, 4vw, 3.2rem); }
+.tool-line strong { color: var(--opening-gold-bright); font-size: clamp(1.5rem, 3vw, 2.5rem); }
 .tool-line span { color: #d0d1d4; font-size: clamp(1rem, 2.2vw, 1.5rem); }
 
-.opening-story { background-position: 70% center; }
-.opening-quote .opening-content { max-width: 1050px; }
-.opening-quote h2 { font-size: clamp(2.5rem, 6vw, 6rem); }
+.opening-story { background-position: center, center; }
+.opening-quote .opening-content { max-width: 660px; }
+.opening-quote h2 { font-size: clamp(2.5rem, 4.7vw, 5rem); }
 .quote-mark { color: var(--opening-gold); font-family: Georgia, serif; font-size: clamp(7rem, 18vw, 14rem); line-height: .3; }
 
 .opening-practice { background-position: center; }
@@ -345,13 +366,28 @@ a { color: inherit; }
 }
 
 @media (max-width: 699px) {
-  .opening-slide { background-position: 62% center; }
+  .opening-slide { background-position: center; }
+  .opening-safe-left {
+    align-content: start;
+    background-image:
+      linear-gradient(180deg, #050608 0%, #050608 46%, rgba(5,6,8,.88) 58%, rgba(5,6,8,.08) 100%),
+      var(--opening-image);
+    background-position: center, center bottom;
+    background-size: 100% 100%, auto 55%;
+    background-repeat: no-repeat;
+  }
+  .opening-safe-left .opening-content { width: 100%; max-width: 100%; margin-inline: 0; }
+  .opening-tools { background-size: 100% 100%, auto 38%; }
+  .opening-quote { background-size: 100% 100%, auto 43%; }
   .opening-fabio { align-content: start; }
   .opening-fabio .opening-content { max-width: 66%; }
   .fabio-stage { right: -18%; width: 80vw; height: 74%; opacity: .78; }
   .tool-line { grid-template-columns: 1fr; gap: .15rem; }
   .opening-slide h1,
   .opening-slide h2 { line-height: .98; }
+  .opening-safe-left h2 { font-size: clamp(2.35rem, 12vw, 4rem); }
+  .opening-tools h2 { font-size: clamp(2.1rem, 10vw, 3.2rem); }
+  .opening-quote h2 { font-size: clamp(2rem, 9.5vw, 3.2rem); }
 }
 
 /* Bônus VIP: Radar de Oportunidades */
