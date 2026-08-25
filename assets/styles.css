@@ -209,3 +209,147 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Apresentação de abertura: cofre premium */
+.opening-deck {
+  --opening-gold: #d9b45b;
+  --opening-gold-bright: #ffe29a;
+  background: #050608;
+}
+
+.opening-header {
+  position: fixed;
+  z-index: 20;
+  inset: 0 1rem auto;
+  width: auto;
+  max-width: none;
+  background: linear-gradient(180deg, rgba(5,6,8,.9), rgba(5,6,8,0));
+  border: 0;
+}
+
+.opening-deck .deck { min-height: 100dvh; }
+.opening-deck .slides,
+.opening-deck .slide { min-height: calc(100dvh - 70px); }
+.opening-deck .slide { padding: clamp(5rem, 8vw, 7rem) clamp(1.4rem, 7vw, 7rem) 3.5rem; }
+
+.opening-slide {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(3,4,6,.97) 0%, rgba(3,4,6,.74) 45%, rgba(3,4,6,.12) 100%),
+    url("abertura/cofre-premium.png") center / cover no-repeat;
+}
+
+.opening-slide::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 66% 50%, rgba(217,180,91,.2), transparent 27%),
+    repeating-linear-gradient(90deg, transparent 0 119px, rgba(255,255,255,.025) 120px);
+  pointer-events: none;
+}
+
+.opening-content { position: relative; z-index: 3; width: min(100%, 1080px); margin-inline: auto; text-align: center; }
+.opening-content-left { margin-inline: 0 auto; text-align: left; max-width: 920px; }
+.opening-slide h1,
+.opening-slide h2 { max-width: none; font-size: clamp(2.8rem, 7vw, 7rem); line-height: .92; letter-spacing: -.065em; text-wrap: balance; }
+.opening-slide h1 span,
+.opening-slide h2 span { color: var(--opening-gold-bright); }
+.opening-slide p { color: #d0d1d4; font-size: clamp(1rem, 2vw, 1.5rem); }
+.opening-slide .eyebrow { color: var(--opening-gold); }
+
+.opening-fabio { background: linear-gradient(90deg, #050608 0%, #090b0f 55%, #131823 100%); }
+.fabio-stage {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  bottom: 0;
+  width: min(45vw, 540px);
+  height: 90%;
+  object-fit: cover;
+  object-position: 50% 16%;
+  filter: saturate(.8) contrast(1.08);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 100%);
+}
+
+.opening-centered::after,
+.opening-tools::after,
+.opening-practice::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  width: min(70vw, 760px);
+  aspect-ratio: 1;
+  border: 2px solid rgba(217,180,91,.24);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 36px rgba(0,0,0,.22), 0 0 120px rgba(217,180,91,.14);
+}
+
+.opening-day { background-position: 68% center; }
+.day-number {
+  position: absolute;
+  z-index: 0;
+  right: 7vw;
+  bottom: -10vh;
+  color: rgba(255,255,255,.055);
+  font-size: clamp(14rem, 35vw, 34rem);
+  font-weight: 950;
+  line-height: .8;
+  letter-spacing: -.12em;
+}
+
+.opening-extra::after {
+  content: "EXTRA";
+  position: absolute;
+  right: 5vw;
+  bottom: 2vh;
+  color: rgba(217,180,91,.09);
+  font-size: clamp(7rem, 23vw, 18rem);
+  font-weight: 950;
+  letter-spacing: -.08em;
+}
+
+.tool-lines { display: grid; gap: 1.1rem; width: min(100%, 860px); margin: 2rem auto 0; }
+.tool-line {
+  display: grid;
+  grid-template-columns: minmax(150px, .7fr) 1fr;
+  align-items: baseline;
+  padding: .8rem 0;
+  border-bottom: 1px solid rgba(217,180,91,.34);
+  text-align: left;
+}
+.tool-line strong { color: var(--opening-gold-bright); font-size: clamp(1.6rem, 4vw, 3.2rem); }
+.tool-line span { color: #d0d1d4; font-size: clamp(1rem, 2.2vw, 1.5rem); }
+
+.opening-story { background-position: 70% center; }
+.opening-quote .opening-content { max-width: 1050px; }
+.opening-quote h2 { font-size: clamp(2.5rem, 6vw, 6rem); }
+.quote-mark { color: var(--opening-gold); font-family: Georgia, serif; font-size: clamp(7rem, 18vw, 14rem); line-height: .3; }
+
+.opening-practice { background-position: center; }
+.opening-practice::before { background: radial-gradient(circle at 60% 48%, rgba(217,180,91,.34), transparent 34%); }
+.opening-practice h2 { font-size: clamp(4rem, 10vw, 9rem); }
+
+.opening-nav {
+  position: relative;
+  z-index: 30;
+  background: #050608;
+  border-color: rgba(217,180,91,.2);
+}
+
+@media (max-width: 699px) {
+  .opening-slide { background-position: 62% center; }
+  .opening-fabio { align-content: start; }
+  .opening-fabio .opening-content { max-width: 66%; }
+  .fabio-stage { right: -18%; width: 80vw; height: 74%; opacity: .78; }
+  .tool-line { grid-template-columns: 1fr; gap: .15rem; }
+  .opening-slide h1,
+  .opening-slide h2 { line-height: .98; }
+}
