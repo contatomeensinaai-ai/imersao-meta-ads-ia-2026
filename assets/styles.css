@@ -472,9 +472,9 @@ a { color: inherit; }
     #050608;
 }
 .pitch-statement .pitch-content { width: min(100%, 1080px); }
+.pitch-statement p { margin-inline: auto; text-align: center; }
 .pitch-cta {
   display: inline-flex;
-  margin-top: 1.8rem;
   padding: .7rem 1rem;
   border: 1px solid rgba(217,180,91,.55);
   border-radius: 999px;
@@ -484,6 +484,9 @@ a { color: inherit; }
   letter-spacing: .08em;
   text-transform: uppercase;
 }
+.pitch-final-actions { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.5rem; }
+.pitch-qr { display: grid; justify-items: center; gap: .35rem; color: var(--pitch-gold-bright); font-size: .68rem; font-weight: 850; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.pitch-qr img { width: 112px; height: 112px; padding: 5px; border-radius: .55rem; background: #fff; }
 .pitch-nav {
   position: relative;
   z-index: 30;
@@ -509,6 +512,10 @@ a { color: inherit; }
   }
   .pitch-statement .pitch-content { width: 100%; }
   .pitch-slide p { max-width: 95%; font-size: 1rem; }
+  .pitch-final-actions { align-items: flex-end; gap: .75rem; }
+  .pitch-cta { max-width: 190px; font-size: .68rem; }
+  .pitch-qr img { width: 82px; height: 82px; }
+  .pitch-qr span { display: none; }
   .pitch-statement { align-content: center; }
 }
 
