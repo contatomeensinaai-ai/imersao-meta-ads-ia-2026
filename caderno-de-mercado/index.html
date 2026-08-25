@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caderno de Mercado | Imersão Meta Ads com IA</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">ME ENSINA <span>AI</span></div>
+    <div class="eyebrow">Caderno de Mercado</div>
+  </header>
+  <main class="page notebook-page">
+    <section class="hero notebook-hero">
+      <div class="eyebrow">Seu contexto não se perde</div>
+      <h1>Cole cada resultado no seu <span class="highlight">Caderno de Mercado.</span></h1>
+      <p>Você copia manualmente cada resposta do chat e cola aqui. O caderno apenas guarda no navegador o que você já colou. Antes da próxima habilidade, copie o contexto acumulado e cole no novo chat.</p>
+    </section>
+
+    <section class="card notebook-help" aria-labelledby="como-usar">
+      <h2 id="como-usar">Como usar</h2>
+      <ol>
+        <li>Execute a habilidade indicada.</li>
+        <li>Copie a resposta completa e cole na etapa correspondente.</li>
+        <li>Clique em <strong>Copiar contexto até aqui</strong>.</li>
+        <li>Abra o próximo chat, cole o contexto e execute a próxima habilidade.</li>
+      </ol>
+      <p class="muted">Não feche uma janela anônima. O salvamento acontece somente neste navegador e neste dispositivo.</p>
+    </section>
+
+    <form id="caderno-form" class="notebook" novalidate>
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 1</div>
+        <label for="mercado">Resultado do Analisador de Mercado Local</label>
+        <textarea id="mercado" name="mercado" rows="12" placeholder="Cole aqui a resposta completa da primeira habilidade."></textarea>
+        <button class="button copy-through" type="button" data-through="mercado" aria-label="Copiar contexto até a Etapa 1, Mercado Local">Copiar contexto até aqui</button>
+      </section>
+
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 2</div>
+        <label for="concorrentes">Resultado do Espião de Concorrentes</label>
+        <textarea id="concorrentes" name="concorrentes" rows="12" placeholder="Cole aqui a resposta completa da segunda habilidade."></textarea>
+        <button class="button copy-through" type="button" data-through="concorrentes" aria-label="Copiar contexto até a Etapa 2, Concorrentes">Copiar contexto até aqui</button>
+      </section>
+
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 3</div>
+        <label for="reviews">Resultado do Minerador de Reviews</label>
+        <textarea id="reviews" name="reviews" rows="12" placeholder="Cole aqui a resposta completa da terceira habilidade."></textarea>
+        <button class="button copy-through" type="button" data-through="reviews" aria-label="Copiar contexto até a Etapa 3, Reviews">Copiar contexto até aqui</button>
+      </section>
+
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 4</div>
+        <label for="publico">Resultado do Construtor de Público Ideal</label>
+        <textarea id="publico" name="publico" rows="12" placeholder="Cole aqui a resposta completa da quarta habilidade."></textarea>
+        <button class="button copy-through" type="button" data-through="publico" aria-label="Copiar contexto até a Etapa 4, Público Ideal">Copiar contexto até aqui</button>
+      </section>
+
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 5</div>
+        <label for="oportunidades">Resultado do Mapeador de Oportunidades</label>
+        <textarea id="oportunidades" name="oportunidades" rows="12" placeholder="Cole aqui a resposta completa da quinta habilidade."></textarea>
+        <button class="button copy-through" type="button" data-through="oportunidades" aria-label="Copiar contexto até a Etapa 5, Oportunidades">Copiar contexto até aqui</button>
+      </section>
+
+      <section class="card notebook-step">
+        <div class="step-number">Etapa 6</div>
+        <label for="dossie">Dossiê de Mercado Final</label>
+        <textarea id="dossie" name="dossie" rows="16" placeholder="Cole aqui o dossiê gerado pela última habilidade."></textarea>
+      </section>
+
+      <section class="card notebook-actions" aria-label="Ações do caderno">
+        <button class="button" id="copiar-contexto" type="button">Copiar todo o contexto</button>
+        <button class="button secondary" id="baixar-caderno" type="button">Baixar meu caderno</button>
+        <button class="button secondary" id="salvar-pdf" type="button">Salvar em PDF</button>
+        <label class="import-label" for="importar-caderno">Restaurar um caderno baixado</label>
+        <input id="importar-caderno" type="file" accept=".md,.txt,text/markdown,text/plain">
+        <button class="text-button" id="limpar-caderno" type="button">Limpar tudo</button>
+        <p id="caderno-status" class="status" aria-live="polite"></p>
+      </section>
+      <section id="contexto-alternativo" class="card context-fallback" hidden>
+        <label for="contexto-gerado">Contexto acumulado para copiar manualmente</label>
+        <textarea id="contexto-gerado" rows="14" readonly></textarea>
+      </section>
+    </form>
+  </main>
+  <footer class="site-footer"><p class="muted">Seus dados ficam salvos somente no navegador que você está usando.</p></footer>
+  <script src="../assets/caderno.js" defer></script>
+</body>
+</html>

@@ -102,6 +102,55 @@ a { color: inherit; }
 .download-card { display: flex; flex-direction: column; gap: .8rem; }
 .download-card .download { margin-top: auto; }
 
+.notebook-page { max-width: 920px; }
+.notebook-hero { padding-bottom: 1.5rem; }
+.notebook-help { margin-bottom: 1rem; }
+.notebook { display: grid; gap: 1rem; }
+.notebook-step { display: grid; gap: .8rem; }
+.step-number { color: var(--gold); font-size: .78rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.notebook-step label { font-size: 1.15rem; font-weight: 850; }
+.notebook-step textarea {
+  width: 100%;
+  min-height: 13rem;
+  resize: vertical;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: .75rem;
+  background: #0e0e14;
+  color: var(--text);
+  font: inherit;
+  line-height: 1.5;
+}
+.notebook-step textarea:focus-visible,
+.text-button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.copy-through { justify-self: stretch; }
+.notebook-actions { display: grid; gap: .75rem; }
+.notebook-actions .button { width: 100%; }
+.text-button {
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 750;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.status { min-height: 1.5rem; margin: 0; color: var(--gold-soft); }
+.import-label,
+.context-fallback label { font-weight: 800; }
+.notebook-actions input[type="file"] {
+  width: 100%;
+  padding: .8rem;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: .75rem;
+  color: var(--text);
+  background: #0e0e14;
+}
+.context-fallback { display: grid; gap: .8rem; }
+.context-fallback[hidden] { display: none; }
+.context-fallback textarea { width: 100%; }
+
 .slides-page { overflow: hidden; }
 .deck {
   min-height: calc(100dvh - 80px);
@@ -147,6 +196,10 @@ a { color: inherit; }
   .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .slide-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .copy-through { justify-self: start; }
+  .notebook-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .notebook-actions .text-button,
+  .notebook-actions .status { grid-column: 1 / -1; }
 }
 
 @media (min-width: 1000px) {
