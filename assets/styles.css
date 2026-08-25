@@ -388,6 +388,130 @@ a { color: inherit; }
   border-color: rgba(217,180,91,.2);
 }
 
+/* Pitch premium: imagens cinematográficas e texto em área segura */
+.premium-pitch {
+  --pitch-gold: #d9b45b;
+  --pitch-gold-bright: #ffe29a;
+  background: #050608;
+}
+
+.pitch-header {
+  position: fixed;
+  z-index: 20;
+  inset: 0 1rem auto;
+  width: auto;
+  max-width: none;
+  background: linear-gradient(180deg, rgba(5,6,8,.94), rgba(5,6,8,0));
+  border: 0;
+}
+
+.premium-pitch .deck { min-height: 100dvh; }
+.premium-pitch .slides,
+.premium-pitch .pitch-slide { min-height: calc(100dvh - 72px); }
+.pitch-slide {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: clamp(5.3rem, 8vw, 7rem) clamp(1.4rem, 7vw, 7rem) 3.5rem;
+  background: #050608;
+}
+.pitch-safe-left {
+  --pitch-image: none;
+  background-image:
+    linear-gradient(90deg, rgba(3,4,6,.99) 0%, rgba(3,4,6,.95) 36%, rgba(3,4,6,.64) 54%, rgba(3,4,6,.08) 79%),
+    var(--pitch-image);
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+}
+.pitch-content {
+  position: relative;
+  z-index: 3;
+  width: min(48%, 690px);
+  margin: 0 auto 0 0;
+}
+.pitch-content-center {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+  text-align: center;
+}
+.pitch-slide h1,
+.pitch-slide h2 {
+  max-width: none;
+  margin: .45rem 0 1.25rem;
+  font-size: clamp(3rem, 6.4vw, 6.9rem);
+  line-height: .92;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.pitch-slide h1 span,
+.pitch-slide h2 span { color: var(--pitch-gold-bright); }
+.pitch-slide p {
+  max-width: 680px;
+  margin: 0;
+  color: #d0d1d4;
+  font-size: clamp(1.05rem, 2vw, 1.48rem);
+  line-height: 1.45;
+}
+.pitch-slide .eyebrow { color: var(--pitch-gold); }
+.pitch-cover { --pitch-image: url("pitch/capa-fabio.png"); }
+.pitch-diagnostic { --pitch-image: url("pitch/diagnostico-fabio.png"); }
+.pitch-group { --pitch-image: url("pitch/encontro-grupo-fabio.png"); }
+.pitch-individual { --pitch-image: url("pitch/individual-fabio.png"); }
+.pitch-support { --pitch-image: url("pitch/suporte-whatsapp.png"); }
+.pitch-time { --pitch-image: url("pitch/objecao-tempo.png"); }
+.pitch-agency { --pitch-image: url("pitch/objecao-agencia.png"); }
+.pitch-bonus-reveal { --pitch-image: url("pitch/bonus-revelacao-fabio.png"); }
+.pitch-bonus-interview { --pitch-image: url("pitch/bonus-entrevista-fabio.png"); }
+.pitch-bonus-agents { --pitch-image: url("pitch/bonus-agentes-fabio.png"); }
+.pitch-seats { --pitch-image: url("pitch/dez-vagas.png"); }
+.pitch-statement {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(217,180,91,.18), transparent 27%),
+    repeating-linear-gradient(90deg, transparent 0 119px, rgba(255,255,255,.022) 120px),
+    #050608;
+}
+.pitch-statement .pitch-content { width: min(100%, 1080px); }
+.pitch-cta {
+  display: inline-flex;
+  margin-top: 1.8rem;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(217,180,91,.55);
+  border-radius: 999px;
+  color: var(--pitch-gold-bright);
+  font-size: clamp(.8rem, 1.4vw, 1rem);
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pitch-nav {
+  position: relative;
+  z-index: 30;
+  background: #050608;
+  border-color: rgba(217,180,91,.2);
+}
+
+@media (max-width: 760px) {
+  .pitch-slide { padding: 5.2rem 1.25rem 3rem; align-content: end; }
+  .pitch-safe-left {
+    background-image:
+      linear-gradient(180deg, rgba(3,4,6,.2) 0%, rgba(3,4,6,.66) 42%, rgba(3,4,6,.99) 76%),
+      var(--pitch-image);
+    background-position: center, 65% center;
+  }
+  .pitch-content { width: 100%; margin: 0; }
+  .pitch-slide h1,
+  .pitch-slide h2 { font-size: clamp(2.55rem, 13vw, 4.4rem); }
+  .pitch-statement h2 {
+    font-size: clamp(2.15rem, 10.5vw, 3.5rem);
+    line-height: .98;
+    overflow-wrap: anywhere;
+  }
+  .pitch-statement .pitch-content { width: 100%; }
+  .pitch-slide p { max-width: 95%; font-size: 1rem; }
+  .pitch-statement { align-content: center; }
+}
+
 @media (max-width: 699px) {
   .opening-slide { background-position: center; }
   .opening-safe-left {
