@@ -2,6 +2,8 @@
 
 Atualizado em **25 de agosto de 2026**. O Ads Manager está em beta e pode mudar. Confirme a interface e a disponibilidade na sua conta antes de executar.
 
+Comece lendo `dossie-mercado/DOSSIÊ-DE-MERCADO-FINAL.md`. Use as skills na mesma tarefa para preservar o contexto real do negócio. A criação salva `campanha-chatgpt-ads/01-plano-chatgpt-ads.md`; a análise posterior lê esse plano e somente métricas reais.
+
 ## 1. Entenda o ambiente
 
 Anúncios no ChatGPT aparecem separados das respostas. Eles podem alcançar pessoas enquanto exploram opções, comparam alternativas e tomam decisões. A campanha é criada e administrada no OpenAI Ads Manager Beta.
@@ -46,11 +48,7 @@ O mínimo diário e as localizações suportadas podem variar. Consulte o seleto
 
 Cada grupo deve representar uma situação ou tema coerente. As pistas de contexto ajudam a descrever momentos de conversa em que a oferta pode ser útil.
 
-Exemplo para house cleaning:
-
-- mudança para uma casa nova;
-- preparação para receber visitas;
-- falta de tempo para limpeza profunda.
+As situações devem vir do Dossiê de Mercado do próprio aluno. Não crie exemplos fictícios para preencher essa etapa.
 
 ## 6. Crie anúncios úteis
 
