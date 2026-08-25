@@ -276,6 +276,49 @@ a { color: inherit; }
     linear-gradient(90deg, rgba(3,4,6,.92) 0%, rgba(3,4,6,.55) 48%, rgba(3,4,6,.1) 100%),
     url("abertura/cofre-premium.png") center / cover no-repeat;
 }
+.opening-practice {
+  background:
+    linear-gradient(90deg, rgba(3,4,6,.82) 0%, rgba(3,4,6,.38) 42%, rgba(3,4,6,.08) 76%),
+    url("abertura/cofre-premium.png") center / cover no-repeat;
+  perspective: 1200px;
+}
+.opening-practice .opening-content {
+  position: absolute;
+  left: 37%;
+  top: 31%;
+  width: 52%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  transform: perspective(1000px) rotateY(29deg) rotateZ(-6deg) skewY(-1.5deg);
+  transform-origin: 78% 50%;
+  transform-style: preserve-3d;
+}
+.opening-practice .eyebrow { margin: 0 0 1.25rem 7%; }
+.opening-practice .vault-perspective-title {
+  display: flex;
+  flex-direction: column;
+  gap: .04em;
+  margin: 0;
+  font-size: clamp(4.2rem, 7.3vw, 8rem);
+  line-height: .78;
+  letter-spacing: -.075em;
+  text-wrap: nowrap;
+}
+.opening-practice .vault-line {
+  display: block;
+  color: #fff;
+  text-shadow:
+    1px 1px 0 #8c8168,
+    2px 2px 0 #746a55,
+    3px 3px 0 #5e5544,
+    8px 14px 26px rgba(0,0,0,.65);
+}
+.opening-practice .vault-line-depth {
+  margin-left: 22%;
+  color: var(--opening-gold-bright);
+  font-size: .78em;
+}
 .opening-journey { --opening-image: url("abertura/jornada-portais.png"); }
 .opening-day-one { --opening-image: url("abertura/dia-1-mercado-local.png"); }
 .opening-day-two { --opening-image: url("abertura/dia-2-campanha.png"); }
@@ -297,20 +340,6 @@ a { color: inherit; }
   filter: saturate(.8) contrast(1.08);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 100%);
   mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 100%);
-}
-
-.opening-practice::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  left: 50%;
-  top: 50%;
-  width: min(70vw, 760px);
-  aspect-ratio: 1;
-  border: 2px solid rgba(217,180,91,.24);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 36px rgba(0,0,0,.22), 0 0 120px rgba(217,180,91,.14);
 }
 
 .opening-day { background-position: center, center; }
@@ -379,6 +408,22 @@ a { color: inherit; }
   .opening-safe-left .opening-content { width: 100%; max-width: 100%; margin-inline: 0; }
   .opening-tools { background-size: 100% 100%, auto 38%; }
   .opening-quote { background-size: 100% 100%, auto 43%; }
+  .opening-practice {
+    background-image:
+      linear-gradient(180deg, #050608 0%, rgba(5,6,8,.9) 35%, rgba(5,6,8,.25) 65%, rgba(5,6,8,.05) 100%),
+      url("abertura/cofre-premium.png");
+    background-position: center, center bottom;
+    background-size: 100% 100%, auto 68%;
+    background-repeat: no-repeat;
+  }
+  .opening-practice .opening-content {
+    left: 12%;
+    top: 22%;
+    width: 82%;
+    transform: perspective(720px) rotateY(18deg) rotateZ(-5deg) skewY(-1deg);
+    transform-origin: 76% 50%;
+  }
+  .opening-practice .vault-perspective-title { font-size: clamp(3rem, 15vw, 4.8rem); }
   .opening-fabio { align-content: start; }
   .opening-fabio .opening-content { max-width: 66%; }
   .fabio-stage { right: -18%; width: 80vw; height: 74%; opacity: .78; }
