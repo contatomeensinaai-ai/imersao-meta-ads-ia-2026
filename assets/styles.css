@@ -278,46 +278,41 @@ a { color: inherit; }
 }
 .opening-practice {
   background:
-    linear-gradient(90deg, rgba(3,4,6,.82) 0%, rgba(3,4,6,.38) 42%, rgba(3,4,6,.08) 76%),
+    linear-gradient(90deg, rgba(3,4,6,.99) 0%, rgba(3,4,6,.94) 34%, rgba(3,4,6,.48) 52%, rgba(3,4,6,.06) 72%),
     url("abertura/cofre-premium.png") center / cover no-repeat;
-  perspective: 1200px;
 }
 .opening-practice .opening-content {
   position: absolute;
-  left: 37%;
-  top: 31%;
-  width: 52%;
-  max-width: none;
+  left: 7%;
+  top: 27%;
+  width: min(38%, 660px);
+  max-width: 660px;
   margin: 0;
   text-align: left;
-  transform: perspective(1000px) rotateY(29deg) rotateZ(-6deg) skewY(-1.5deg);
-  transform-origin: 78% 50%;
-  transform-style: preserve-3d;
 }
-.opening-practice .eyebrow { margin: 0 0 1.25rem 7%; }
+.opening-practice .eyebrow {
+  position: static;
+  margin: 0 0 1.25rem;
+}
 .opening-practice .vault-perspective-title {
   display: flex;
   flex-direction: column;
   gap: .04em;
+  position: static;
   margin: 0;
-  font-size: clamp(4.2rem, 7.3vw, 8rem);
-  line-height: .78;
+  font-size: clamp(4.8rem, 7.7vw, 8.2rem);
+  line-height: .8;
   letter-spacing: -.075em;
   text-wrap: nowrap;
 }
-.opening-practice .vault-line {
+.opening-practice .vault-title-main,
+.opening-practice .vault-title-depth {
   display: block;
-  color: #fff;
-  text-shadow:
-    1px 1px 0 #8c8168,
-    2px 2px 0 #746a55,
-    3px 3px 0 #5e5544,
-    8px 14px 26px rgba(0,0,0,.65);
 }
-.opening-practice .vault-line-depth {
-  margin-left: 22%;
+.opening-practice .vault-title-main { color: #fff; }
+.opening-practice .vault-title-depth {
   color: var(--opening-gold-bright);
-  font-size: .78em;
+  font-size: .88em;
 }
 .opening-journey { --opening-image: url("abertura/jornada-portais.png"); }
 .opening-day-one { --opening-image: url("abertura/dia-1-mercado-local.png"); }
@@ -384,8 +379,7 @@ a { color: inherit; }
 .quote-mark { color: var(--opening-gold); font-family: Georgia, serif; font-size: clamp(7rem, 18vw, 14rem); line-height: .3; }
 
 .opening-practice { background-position: center; }
-.opening-practice::before { background: radial-gradient(circle at 60% 48%, rgba(217,180,91,.34), transparent 34%); }
-.opening-practice h2 { font-size: clamp(4rem, 10vw, 9rem); }
+.opening-practice::before { background: none; }
 
 .opening-nav {
   position: relative;
@@ -417,13 +411,12 @@ a { color: inherit; }
     background-repeat: no-repeat;
   }
   .opening-practice .opening-content {
-    left: 12%;
-    top: 22%;
-    width: 82%;
-    transform: perspective(720px) rotateY(18deg) rotateZ(-5deg) skewY(-1deg);
-    transform-origin: 76% 50%;
+    left: 7%;
+    top: 16%;
+    width: 86%;
+    max-width: none;
   }
-  .opening-practice .vault-perspective-title { font-size: clamp(3rem, 15vw, 4.8rem); }
+  .opening-practice .vault-perspective-title { font-size: clamp(3.7rem, 17vw, 5.4rem); }
   .opening-fabio { align-content: start; }
   .opening-fabio .opening-content { max-width: 66%; }
   .fabio-stage { right: -18%; width: 80vw; height: 74%; opacity: .78; }
