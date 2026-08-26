@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raio X do Funil de Vendas</title>
+<style>
+:root{--bg:#08090d;--surface:#151720;--line:#2a2d39;--text:#f7f7fb;--muted:#a9adba;--gold:#f5b642;--red:#ff6b6b;--green:#43d19e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#2b2110 0,transparent 35rem),var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,sans-serif}header,main,footer{width:min(1120px,calc(100% - 2rem));margin:auto}header{padding:2rem 0 1rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}button{min-height:48px;padding:.8rem 1rem;border:0;border-radius:.7rem;background:var(--gold);color:#1b1202;font-weight:800;cursor:pointer}button:focus-visible{outline:3px solid white;outline-offset:3px}.hero{padding:3rem 0 2rem}.eyebrow{color:var(--gold);font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}h1{font-size:clamp(2.4rem,8vw,5.8rem);line-height:.95;letter-spacing:-.05em;margin:.5rem 0 1rem}h2{font-size:clamp(1.5rem,4vw,2.5rem)}.muted{color:var(--muted)}.metrics,.stages,.diagnosis{display:grid;gap:1rem}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric,.stage,.panel{border:1px solid var(--line);border-radius:1rem;background:linear-gradient(145deg,#191b25,#101119);padding:1.1rem}.metric strong{display:block;font-size:clamp(1.5rem,5vw,2.6rem)}.stage-head{display:flex;justify-content:space-between;gap:1rem;align-items:start}.stage-head span{color:var(--muted);font-size:.8rem}.stage h3{margin:.15rem 0}.stage-head>strong{font-size:2rem;color:var(--gold)}.bar{height:.7rem;background:#282b35;border-radius:999px;overflow:hidden;margin:1rem 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#ffe29a);border-radius:inherit}dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:0}dt{color:var(--muted);font-size:.78rem}dd{margin:0;font-weight:750}.diagnosis{margin:2rem 0}ul{padding-left:1.2rem}footer{padding:2rem 0 4rem;color:var(--muted)}@media(min-width:760px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.stages{grid-template-columns:repeat(2,minmax(0,1fr))}.diagnosis{grid-template-columns:repeat(3,minmax(0,1fr))}}@media print{body{background:white;color:#111}button{display:none}.metric,.stage,.panel{background:white;border-color:#ccc;break-inside:avoid}.muted,dt{color:#555}}
+</style></head><body>
+<header><div><strong>ME ENSINA AI</strong><div class="eyebrow">Diagnóstico privado</div></div><button type="button" onclick="window.print()">Salvar em PDF</button></header>
+<main><section class="hero"><div class="eyebrow">Raio X do Funil de Vendas</div><h1>Empresa Demonstração</h1><p class="muted">Período analisado: Agosto de 2026</p></section>
+<section aria-labelledby="resumo"><h2 id="resumo">Visão geral</h2><div class="metrics"><article class="metric"><span class="muted">Oportunidades nas etapas</span><strong>81</strong></article><article class="metric"><span class="muted">Valor conhecido</span><strong>USD 58,200.00</strong></article><article class="metric"><span class="muted">Oportunidades paradas</span><strong>22</strong></article></div></section>
+<section aria-labelledby="funil"><h2 id="funil">Etapas do funil</h2><div class="stages">
+        <article class="stage">
+          <div class="stage-head"><div><span>Etapa 1</span><h3>Novo lead</h3></div><strong>42</strong></div>
+          <div class="bar" aria-label="Proporção visual desta etapa"><i style="width:100%"></i></div>
+          <dl><div><dt>Valor conhecido</dt><dd>USD 21,000.00</dd></div><div><dt>Paradas</dt><dd>12</dd></div><div><dt>Tempo médio</dt><dd>5 dias</dd></div><div><dt>Passagem</dt><dd>Entrada do funil</dd></div></dl>
+        </article>
+        <article class="stage">
+          <div class="stage-head"><div><span>Etapa 2</span><h3>Contato realizado</h3></div><strong>24</strong></div>
+          <div class="bar" aria-label="Proporção visual desta etapa"><i style="width:57%"></i></div>
+          <dl><div><dt>Valor conhecido</dt><dd>USD 16,800.00</dd></div><div><dt>Paradas</dt><dd>6</dd></div><div><dt>Tempo médio</dt><dd>4 dias</dd></div><div><dt>Passagem</dt><dd>57.1% da etapa anterior</dd></div></dl>
+        </article>
+        <article class="stage">
+          <div class="stage-head"><div><span>Etapa 3</span><h3>Orçamento enviado</h3></div><strong>11</strong></div>
+          <div class="bar" aria-label="Proporção visual desta etapa"><i style="width:26%"></i></div>
+          <dl><div><dt>Valor conhecido</dt><dd>USD 13,200.00</dd></div><div><dt>Paradas</dt><dd>4</dd></div><div><dt>Tempo médio</dt><dd>8 dias</dd></div><div><dt>Passagem</dt><dd>45.8% da etapa anterior</dd></div></dl>
+        </article>
+        <article class="stage">
+          <div class="stage-head"><div><span>Etapa 4</span><h3>Fechado</h3></div><strong>4</strong></div>
+          <div class="bar" aria-label="Proporção visual desta etapa"><i style="width:10%"></i></div>
+          <dl><div><dt>Valor conhecido</dt><dd>USD 7,200.00</dd></div><div><dt>Paradas</dt><dd>0</dd></div><div><dt>Tempo médio</dt><dd>2 dias</dd></div><div><dt>Passagem</dt><dd>36.4% da etapa anterior</dd></div></dl>
+        </article></div></section>
+<section class="diagnosis" aria-label="Diagnóstico e plano"><article class="panel"><div class="eyebrow">Gargalos</div><ul><li>Doze novos leads estão sem avanço registrado.</li><li>O tempo médio em orçamento é o maior do funil.</li></ul></article><article class="panel"><div class="eyebrow">Plano de sete dias</div><ul><li>Revisar os doze novos leads parados.</li><li>Definir uma rotina de follow-up para orçamentos.</li></ul></article><article class="panel"><div class="eyebrow">Lacunas</div><ul><li>A origem dos leads não foi informada.</li></ul></article></section></main>
+<footer>Arquivo local gerado pelo Raio X do Funil de Vendas. Nenhum dado é enviado por esta página.</footer></body></html>
